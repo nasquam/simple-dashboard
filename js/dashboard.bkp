@@ -1,5 +1,12 @@
 "use strict";
 {
+  const clearChart = canvas => {
+    let chart = document.getElementById(canvas).getContext("2d");
+    let width = 0;
+    let height = 0;
+
+    chart.clearRect(0, 0, width, height);
+  };
 
   const hideSideNav = () => {
     document.getElementById("sideNav").style.display = "none";
@@ -16,18 +23,9 @@
     document.getElementById("rightArrow").style.display = "none";
     document.getElementById("leftArrow").style.display = "inline";
 
-    let incidentChartContainer = document.getElementById("incident-chart-container");
-    let problemChartContainer = document.getElementById("problem-chart-container");
-    let changeChartContainer = document.getElementById("change-chart-container");
-
-    incidentChartContainer.innerHTML = "";
-    problemChartContainer.innerHTML = "";
-    changeChartContainer.innerHTML = "";
-
-    buildChart(incidentChartData);
-    buildChart(problemChartData);
-    buildChart(changeChartData);
-
+    // clearChart("incidentChart");
+    // clearChart("problemChart");
+    // clearChart("incidentChart");
   };
 
   const buildChart = chartObj => {
@@ -36,18 +34,9 @@
     //chartObj.dataSet - Data for a data set
     //chartObj.canvas - elementID of the canvas element to target
     //chartObj.height - sets the height of the chart
-    //chartObj.targetDiv - targets the DIV to insert the canvas element into
 
-    let testChartDiv = document.getElementById(chartObj.targetDiv);
-
-    testChartDiv.innerHTML = "";
-
-    var chart = document.createElement("canvas");
-    chart.id = chartObj.canvas;
-    testChartDiv.appendChild(chart);
-    chart.style.height = chartObj.height;
-    
-    //var chart = document.getElementById(chartObj.canvas).getContext("2d");
+    var chart = document.getElementById(chartObj.canvas).getContext("2d");
+    chart.canvas.parentNode.style.height = chartObj.height;
 
     let JSONdata = [];
 
@@ -109,7 +98,6 @@
       ["7", "8", "1", "2", "5", "10", "4", "8", "2", "3", "8", "9"]
     ], // Data for a data set
     canvas: "incidentChart", // elementID of the canvas element to target
-    targetDiv: "incident-chart-container",
     height: "350px", // sets the height of the chart
     backgroundColor: [
       ["rgba(255, 0, 0, 0.15)"],
@@ -145,7 +133,6 @@
       ["7", "8", "1", "2", "5", "10", "5", "1", "10", "7", "3", "2"]
     ], // Data for a data set
     canvas: "problemChart", // elementID of the canvas element to target
-    targetDiv: "problem-chart-container",
     height: "350px", // sets the height of the chart
     backgroundColor: [
       ["rgba(255, 0, 0, 0.15)"],
@@ -181,7 +168,6 @@
       ["7", "8", "1", "2", "5", "10", "5", "1", "10", "7", "3", "2"]
     ], // Data for a data set
     canvas: "changeChart", // elementID of the canvas element to target
-    targetDiv: "change-chart-container",
     height: "350px", // sets the height of the chart
     backgroundColor: [
       ["rgba(255, 0, 0, 0.15)"],
@@ -194,7 +180,6 @@
       ["rgba(0, 0, 255, 0.15)"]
     ]
   };
-
 
   buildChart(incidentChartData);
   buildChart(problemChartData);
