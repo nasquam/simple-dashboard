@@ -1,0 +1,31 @@
+.loginSideBar {
+  background-color: #242424;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.loginImage {
+  background-image: url("../img/tyler-franta-589346-unsplash.jpg");
+  background-size: cover;
+  flex-grow: 3;
+}
+
+.loginForm {
+  background-color: #ffffff;
+  width: 500px;
+  position: absolute;
+  margin-left: 225px;
+  margin-top: 30vh;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.36);
+}
+
+.logInHeading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+

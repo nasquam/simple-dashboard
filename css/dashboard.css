@@ -1,0 +1,76 @@
+.badge {
+    padding: 5px;
+}
+.navbar-sizing {
+    width: 250px;
+    margin-right: 16px;
+    /* border: red 1px solid; */
+}
+
+.navbar-config {
+    padding-top: 25px;
+}
+
+.i {
+    width: 44px;
+}
+
+.status-badges {
+    margin-top: 25px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.menu-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-li {
+    padding: 10px;
+    border-left: 5px;
+    border-left-style: solid;
+    border-color: #eeeeee;
+    padding-left: 25px;
+}
+
+.menu-li-active {
+    border-left: 5px;
+    border-left-style: solid;
+    border-color: orange;
+}
+
+.menu-li:hover {
+   background-color: #dddddd; 
+   border-left: 5px;
+   border-left-style: solid;
+   border-color:orange;
+}
+
+.dashboard-data {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-grow: 1;
+}
+
+.flex-wrap {
+    display: flex;
+}
+
+.timeline {
+    background-color: #ffffff;
+    border-radius: 5px;
+    min-height: 350px;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+.dashboard-heading {
+    margin-bottom: 25px;
+    /* padding: 15px; */
+}
+
+.displayNone {
+    display: none;
+}
